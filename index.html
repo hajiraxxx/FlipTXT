@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PinkTXT 💌</title>
+    <title>FlipTXT 💖</title>
+
     <link rel="stylesheet" href="style.css">
 
-    <!-- cute font -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- username screen -->
+<!-- LOGIN / BOOT SCREEN -->
 <div class="login-screen" id="login">
-    <h1>PinkTXT 💖</h1>
-    <input type="text" id="username" placeholder="enter your username...">
-    <button onclick="enterChat()">Enter 💌</button>
+    <div class="boot">
+        <h1>💖 FlipTXT</h1>
+        <p>loading messages...</p>
+    </div>
+
+    <input type="text" id="username" placeholder="enter your name...">
+    <button onclick="enterChat()">unlock 💌</button>
 </div>
 
-<!-- chat screen -->
+<!-- PHONE -->
 <div class="phone hidden" id="chat-screen">
 
+    <!-- top bar -->
     <div class="top-bar">
         <span id="user-display"></span>
         <span class="status">online 💕</span>
     </div>
 
+    <!-- chat -->
     <div id="chat-box"></div>
 
+    <!-- input -->
     <div class="input-area">
         <input type="text" id="message-input" placeholder="type a message...">
         <button onclick="sendMessage()">➤</button>
     </div>
 
-</div>
-<div class="phone">
-
-    <div class="screen">
-        <h2>💌 PinkTXT</h2>
-
-        <div id="chat-box"></div>
-
-        <div class="input-area">
-            <input id="message-input" placeholder="type...">
-            <button onclick="sendMessage()">➤</button>
-        </div>
-    </div>
-
+    <!-- keypad (decorative) -->
     <div class="keypad">
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
-        <div class="key"></div>
+        <div class="key"></div><div class="key"></div><div class="key"></div>
+        <div class="key"></div><div class="key"></div><div class="key"></div>
+        <div class="key"></div><div class="key"></div><div class="key"></div>
     </div>
 
 </div>
