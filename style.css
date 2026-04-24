@@ -1,39 +1,88 @@
 body {
-    background: linear-gradient(pink, hotpink);
-    font-family: "Arial";
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #ffb6d9, #ff69b4);
+    font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    overflow: hidden;
 }
 
-/* phone frame */
+/* sparkles overlay */
+body::before {
+    content: "✨ ✧ ✦ ✨ ✧ ✦ ✨";
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.2;
+    animation: sparkle 10s linear infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
+}
+
+/* login screen */
+.login-screen {
+    text-align: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+.login-screen h1 {
+    font-family: 'Pacifico', cursive;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: hotpink;
+    color: white;
+    cursor: pointer;
+}
+
+/* phone */
 .phone {
-    width: 280px;
-    height: 500px;
-    background: #ff69b4;
+    width: 300px;
+    height: 550px;
+    background: linear-gradient(#ff69b4, #ff1493);
     border-radius: 40px;
     padding: 15px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.6);
-}
-
-/* screen */
-.screen {
-    background: #fff0f5;
-    height: 100%;
-    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.6);
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
-/* title */
-h2 {
-    text-align: center;
-    color: hotpink;
+/* hidden */
+.hidden {
+    display: none;
 }
 
-/* chat area */
+/* top bar */
+.top-bar {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* chat */
 #chat-box {
     flex: 1;
     overflow-y: auto;
@@ -42,40 +91,31 @@ h2 {
 
 /* messages */
 .message {
-    background: white;
-    padding: 8px 12px;
-    border-radius: 15px;
+    padding: 10px;
+    border-radius: 20px;
     margin: 5px 0;
-    width: fit-content;
-    max-width: 80%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    max-width: 70%;
+    animation: pop 0.2s ease;
 }
 
-/* YOUR messages on the right */
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* sent */
 .sent {
-    background: hotpink;
-    color: white;
+    background: white;
     margin-left: auto;
 }
 
-/* input area */
+/* received */
+.received {
+    background: #ffe6f2;
+}
+
+/* input */
 .input-area {
     display: flex;
     gap: 5px;
-}
-
-input {
-    flex: 1;
-    padding: 8px;
-    border-radius: 15px;
-    border: none;
-}
-
-button {
-    background: hotpink;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 8px 12px;
-    cursor: pointer;
 }
