@@ -4,49 +4,46 @@
     <title>FlipTXT 💖</title>
 
     <link rel="stylesheet" href="style.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- LOGIN / BOOT SCREEN -->
+<!-- LOGIN -->
 <div class="login-screen" id="login">
-    <div class="boot">
-        <h1>💖 FlipTXT</h1>
-        <p>loading messages...</p>
-    </div>
-
+    <h1>💖 FlipTXT</h1>
     <input type="text" id="username" placeholder="enter your name...">
     <button onclick="enterChat()">unlock 💌</button>
 </div>
 
 <!-- PHONE -->
-<div class="phone hidden" id="chat-screen">
+<div class="phone" id="phone">
 
-    <!-- top bar -->
-    <div class="top-bar">
-        <span id="user-display"></span>
-        <span class="status">online 💕</span>
+    <div class="phone-inner" id="phone-inner">
+
+        <div class="top-bar">
+            <span id="user-display"></span>
+            <span class="status">online 💕</span>
+        </div>
+
+        <div id="chat-box"></div>
+
+        <div class="input-area">
+            <input id="message-input" placeholder="type a message...">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+
+        <div class="keypad">
+            <div class="key"></div><div class="key"></div><div class="key"></div>
+            <div class="key"></div><div class="key"></div><div class="key"></div>
+            <div class="key"></div><div class="key"></div><div class="key"></div>
+        </div>
+
     </div>
-
-    <!-- chat -->
-    <div id="chat-box"></div>
-
-    <!-- input -->
-    <div class="input-area">
-        <input type="text" id="message-input" placeholder="type a message...">
-        <button onclick="sendMessage()">➤</button>
-    </div>
-
-    <!-- keypad (decorative) -->
-    <div class="keypad">
-        <div class="key"></div><div class="key"></div><div class="key"></div>
-        <div class="key"></div><div class="key"></div><div class="key"></div>
-        <div class="key"></div><div class="key"></div><div class="key"></div>
-    </div>
-
 </div>
+
+<!-- ringtone -->
+<audio id="ping" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
 
 <script src="script.js"></script>
 </body>
