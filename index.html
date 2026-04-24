@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FlipTXT 💕</title>
+    <title>PinkTXT 💌</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="phone">
-    <div class="screen" id="home">
-        <h2>📱 Pink Phone</h2>
-        <button onclick="openMessages()">Messages 💌</button>
-    </div>
+    <div class="screen">
 
-    <div class="screen hidden" id="messages">
-        <h2>Inbox</h2>
-        <div class="chat">
-            <p class="msg">hey babe 💕</p>
-            <p class="msg">what are you doing xx</p>
+        <h2>💌 PinkTXT</h2>
+
+        <div id="chat-box"></div>
+
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="type a message...">
+            <button onclick="sendMessage()">Send</button>
         </div>
-        <button onclick="goHome()">Back</button>
+
     </div>
 </div>
 
