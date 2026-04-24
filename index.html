@@ -3,22 +3,35 @@
 <head>
     <title>PinkTXT 💌</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- cute font -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="phone">
-    <div class="screen">
+<!-- username screen -->
+<div class="login-screen" id="login">
+    <h1>PinkTXT 💖</h1>
+    <input type="text" id="username" placeholder="enter your username...">
+    <button onclick="enterChat()">Enter 💌</button>
+</div>
 
-        <h2>💌 PinkTXT</h2>
+<!-- chat screen -->
+<div class="phone hidden" id="chat-screen">
 
-        <div id="chat-box"></div>
-
-        <div class="input-area">
-            <input type="text" id="message-input" placeholder="type a message...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-
+    <div class="top-bar">
+        <span id="user-display"></span>
+        <span class="status">online 💕</span>
     </div>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input type="text" id="message-input" placeholder="type a message...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+
 </div>
 
 <script src="script.js"></script>
